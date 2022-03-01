@@ -65,6 +65,6 @@ public class RegistrationTest {
         registrationPage.setUser(user);
         registrationPage.clickButtonRegistration();
 
-        assertEquals("error message display if password is not correct","Некорректный пароль", registrationPage.getTextErrorPassword());
+        assertEquals("an error message is displayed if the password is not correct","Некорректный пароль", registrationPage.getTextErrorPassword());
     }
 }
