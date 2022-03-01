@@ -23,20 +23,20 @@ public class LoginPage {
     @FindBy(how = How.XPATH, using = "//button[text()='Войти']")
     private SelenideElement buttonLogin;
 
-    @Step
+    @Step("Set user data in login page")
     public void setUserData(String email, String password){
         fieldEmailLogin.shouldBe(visible);
         fieldEmailLogin.setValue(email);
         fieldPasswordLogin.setValue(password);;
     }
 
-    @Step
+    @Step("Click button login in login page")
     public void clickButtonLogin() {
         buttonLogin.shouldBe(visible);
         buttonLogin.click();
     }
 
-    @Step
+    @Step("Get text login in login page")
     public String getTextLogin() {
         textLogin.shouldBe(visible);
         return textLogin.getText();

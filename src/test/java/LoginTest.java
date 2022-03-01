@@ -51,7 +51,7 @@ public class LoginTest {
         loginPage.setUserData(dataRegistration.get("email"), dataRegistration.get("password"));
         loginPage.clickButtonLogin();
 
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("User is login from main page display button order, button order is displayed","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class LoginTest {
         loginPage.setUserData(dataRegistration.get("email"), dataRegistration.get("password"));
         loginPage.clickButtonLogin();
 
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("User is login from personal area page, button order is displayed","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 
     @Test
@@ -82,7 +82,7 @@ public class LoginTest {
         loginPage.clickButtonLogin();
 
         MainPage mainPage = page(MainPage.class);
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("User is login from registration page, button order is displayed","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 
     @Test
@@ -97,6 +97,6 @@ public class LoginTest {
         loginPage.clickButtonLogin();
 
         MainPage mainPage = page(MainPage.class);
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("User is login from restore password page, button order is displayed","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 }

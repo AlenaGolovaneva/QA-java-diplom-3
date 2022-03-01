@@ -12,7 +12,7 @@ public class RestorePasswordPage {
     @FindBy(how = How.XPATH, using = "//a[text()='Войти']")
     private SelenideElement buttonLoginRestorePass;
 
-    @Step
+    @Step("Click button login restore pass in restore password page")
     public void clickButtonLoginRestorePass() {
         buttonLoginRestorePass.shouldBe(visible);
         buttonLoginRestorePass.click();

@@ -52,7 +52,7 @@ public class PersonalAreaTest {
         headerPage.clickButtonPersonalAreaHeader();
 
         AccountProfilePage accountProfilePage = page(AccountProfilePage.class);
-        assertEquals("Профиль", accountProfilePage.getTextProfile());
+        assertEquals("check profile text is displayed on personal area","Профиль", accountProfilePage.getTextProfile());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class PersonalAreaTest {
         headerPage.clickButtonLogoType();
 
         MainPage mainPage = page(MainPage.class);
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("text button create order is displayed on main page","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 
     @Test
@@ -76,6 +76,6 @@ public class PersonalAreaTest {
         headerPage.clickButtonConstructor();
 
         MainPage mainPage = page(MainPage.class);
-        assertEquals("Оформить заказ", mainPage.getTextButtonCreateOrder());
+        assertEquals("text button create order is displayed on main page","Оформить заказ", mainPage.getTextButtonCreateOrder());
     }
 }

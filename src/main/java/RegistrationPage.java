@@ -26,7 +26,7 @@ public class RegistrationPage {
     @FindBy(how = How.XPATH, using = "//a[text()='Войти']/../a")
     private SelenideElement buttonLogin;
 
-    @Step
+    @Step("Set user in registration page")
     public void setUser(User user){
         fieldName.shouldBe(visible);
         fieldName.setValue(user.getName());;
@@ -34,19 +34,19 @@ public class RegistrationPage {
         fieldPassword.setValue(user.getPassword());;
     }
 
-    @Step
+    @Step("Click button registration in registration page")
     public void clickButtonRegistration() {
         buttonRegistration.shouldBe(visible);
         buttonRegistration.click();
     }
 
-    @Step
+    @Step("Click button login in registration page")
     public void clickButtonLogin() {
         buttonLogin.shouldBe(visible);
         buttonLogin.click();
     }
 
-    @Step
+    @Step("Get text error password in registration page")
     public String getTextErrorPassword() {
         fieldErrorPassword.shouldBe(visible);
         return fieldErrorPassword.getText();

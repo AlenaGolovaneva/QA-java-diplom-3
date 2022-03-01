@@ -55,6 +55,6 @@ public class LogOutTest {
 
         AccountProfilePage accountProfilePage = page(AccountProfilePage.class);
         accountProfilePage.clickButtonLogout();
-        assertEquals("Вход", loginPage.getTextLogin());
+        assertEquals("check login button display","Вход", loginPage.getTextLogin());
     }
 }

@@ -15,19 +15,19 @@ public class HeaderPage {
     @FindBy(how = How.XPATH, using = "//p[text()='Конструктор']")
     private SelenideElement buttonConstructor;
 
-    @Step
+    @Step("Click button personal area header")
     public void clickButtonPersonalAreaHeader() {
         buttonPersonalArea.shouldBe(visible);
         buttonPersonalArea.click();
     }
 
-    @Step
+    @Step("Click button logo type in header")
     public void clickButtonLogoType() {
         buttonLogoType.shouldBe(visible);
         buttonLogoType.click();
     }
 
-    @Step
+    @Step("Click button constructor in header")
     public void clickButtonConstructor() {
         buttonConstructor.shouldBe(visible);
         buttonConstructor.click();

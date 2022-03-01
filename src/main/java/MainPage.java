@@ -28,49 +28,49 @@ public class MainPage {
     @FindBy(how = How.XPATH, using = "//span[text()='Соусы']")
     private SelenideElement buttonSauces;
 
-    @Step
+    @Step("Click button login to account in main page")
     public void clickButtonLoginToAccount() {
         buttonLoginToAccount.shouldBe(visible);
         buttonLoginToAccount.click();
     }
 
-    @Step
+    @Step("Click button toppings in main page")
     public void clickButtonToppings() {
         buttonToppings.shouldBe(visible);
         buttonToppings.click();
     }
 
-    @Step
+    @Step("Click button rolls in main page")
     public void clickButtonRolls() {
         buttonRolls.shouldBe(visible);
         buttonRolls.click();
     }
 
-    @Step
+    @Step("Click button sauces in main page")
     public void clickButtonSauces() {
         buttonSauces.shouldBe(visible);
         buttonSauces.click();
     }
 
-    @Step
+    @Step("Get text button create order in main page")
     public String getTextButtonCreateOrder() {
         buttonCreateOrder.shouldBe(visible);
         return buttonCreateOrder.getText();
     }
 
-    @Step
+    @Step("Get text toppings in main page")
     public String getTextToppings() {
         textToppings.shouldBe(visible);
         return textToppings.getText();
     }
 
-    @Step
+    @Step("Get text rolls in main page")
     public String getTextRolls() {
         textRolls.shouldBe(visible);
         return textRolls.getText();
     }
 
-    @Step
+    @Step("Get text sauces in main page")
     public String getTextSauces() {
         textSauces.shouldBe(visible);
         return textSauces.getText();

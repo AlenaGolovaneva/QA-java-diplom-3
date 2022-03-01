@@ -53,7 +53,7 @@ public class ConstructorTest {
         mainPage.clickButtonToppings();
         mainPage.clickButtonRolls();
 
-        assertEquals("Булки", mainPage.getTextRolls());
+        assertEquals("Constructor rolls is display","Булки", mainPage.getTextRolls());
     }
 
     @Test
@@ -63,7 +63,7 @@ public class ConstructorTest {
         MainPage mainPage = page(MainPage.class);
         mainPage.clickButtonToppings();
         mainPage.clickButtonSauces();
-        assertEquals("Соусы", mainPage.getTextSauces());
+        assertEquals("Constructor souse is display","Соусы", mainPage.getTextSauces());
     }
 
     @Test
@@ -72,6 +72,6 @@ public class ConstructorTest {
     public void constructorTopping() {
         MainPage mainPage = page(MainPage.class);
         mainPage.clickButtonToppings();
-        assertEquals("Начинки", mainPage.getTextToppings());
+        assertEquals("Constructor topping is display","Начинки", mainPage.getTextToppings());
     }
 }

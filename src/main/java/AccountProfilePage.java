@@ -15,13 +15,13 @@ public class AccountProfilePage {
     @FindBy(how = How.XPATH, using = "//button[text()='Выход']")
     private SelenideElement logoutButton;
 
-    @Step
+    @Step("Get text profile account profile page")
     public String getTextProfile() {
         fieldProfile.shouldBe(visible);
         return fieldProfile.getText();
     }
 
-    @Step
+    @Step("Click button logout account profile page")
     public void clickButtonLogout() {
         logoutButton.shouldBe(visible);
         logoutButton.click();
